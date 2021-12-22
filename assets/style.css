@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #e9ecf4;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "header header header header"
+                        "sidebar content content ads-1"
+                        "sidebar content content ads-1"
+                        "sidebar content content ads-2"
+                        "sidebar widget-1 widget-2 ads-2"
+                        "sidebar widget-1 widget-2 ads-3"
+                        "sidebar widget-1 widget-2 ads-3"
+                        "footer footer footer footer";
+}
+
+.header {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: inherit;
+    grid-template-areas: "head-1 head-2 head-2 head-3";
+}
+
+.footer {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container> div,
+.container .header,
+.container .content,
+.container .sidebar,
+.container .footer{
+    background: #e9ecf4;;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.container .content {
+    background-color: #fff;
+    grid-area: content;
+}
+
+.container .ads-1,
+.container .ads-2,
+.container .ads-3{
+    background: red;
+    color: #fff;
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .ads-1{
+    grid-area: ads-1;
+}
+
+.container .ads-2{
+    grid-area: ads-2;
+}
+
+.container .ads-3{
+    grid-area: ads-3;
+}
+
+.container .sidebar{
+    background: #faa43d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+
+.container .widget-1,
+.container .widget-2 {
+    background: green;
+    color: #fff;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .widget-1{
+    grid-area: widget-1;
+}
+
+.container .widget-2{
+    grid-area: widget-2;
+}
+
+.container .header {
+    margin: 0;
+    padding: 0;
+    grid-area: header;
+}
+
+.header>div {
+    background: #55a8fd;
+    border-radius: 4px;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .head-2{
+    grid-area: head-2;
+}
+
+.container .footer {
+    margin:0;
+    padding: 0;
+    grid-area: footer;
+}
+
+.footer>div {
+    background: #12203e;
+    border-radius: 4px;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
